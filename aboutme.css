@@ -1,0 +1,42 @@
+#hello {
+ text-align: center;
+ font-family: helvetica;
+ font-size: 30px;
+ padding: 25px 15px 25px;
+ border: 15px solid silver;
+ background-color: #869A7E;
+}
+	
+
+.para {
+	float: right;
+	padding: 30px 30px;
+	padding-right: 80px;
+	margin-right: 7%;
+	border: 15px solid silver;
+	background-color: #869A7E;
+	font-size: 18px;
+}
+li a {
+	display: block;
+	width: 60px;
+	
+}
+ul {
+  list-style-type: none;
+  margin: margin-left: 8%;
+  margin-top: 15px
+  padding: 0 30px;
+  border: 9px solid silver;
+  width: 200px;
+  background-color: #869A7E;  
+	
+}
+#body {
+margin: auto 10px;
+width: auto;
+height: 2000px;
+background-color: #D89441;
+}
+	
+}
