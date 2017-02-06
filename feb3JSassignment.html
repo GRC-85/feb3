@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset= "utf-8"/>
+		<title>JavaScript</title>
+
+  </head>
+  <body>
+   <table id="myTable" border="1">
+       <tr>
+		     <td>Row cell1</td>
+			 <td>Row cell2</td>
+		</tr>
+	   <tr>
+            <td>Row cell1</td>
+            <td>Row cell2</td>
+        </tr>
+        <tr>
+            <td>Row cell1</td>
+            <td>Row cell2</td>
+        </tr>
+        <tr>
+            <td>Row cell1</td>
+            <td>Row cell2</td>
+        </tr>
+		
+    </table>
+	<button onclick="tableFunction()">Add a Row</button>
+	
+
+      <table id="myTables" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+  
+  <p>Clicking the buttons will display day and time</p>
+  
+  <button onclick="myDate()">DATE</button>
+  <p id="demo"></p>
+  <button onclick="startTime()">TIME</button>
+  <p id= 'txt'></p>
+  
+  <script>
+	function tableFunction() {
+	  
+	    var table =  document.getElementById('myTable');
+		    var row = table.insertRow(0);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(0);
+			cell1.innerHTML = "New Cell1";
+			cell2.innerHTML = "New Cell2";
+	
+	}
+	
+	function myDate() {
+	var text = "";
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+	         var n = weekday[d.getDay()];
+			text += "<b>Today is:</b> " + n + "<br>";
+   
+    document.getElementById("demo").innerHTML = text;
+}
+
+ function startTime() {
+    var text = "";
+    var today = new Date();
+    var h = today.getHours();
+	var ampm = h >= 12 ? 'PM' : 'AM';
+	h = h % 12;
+	h = h ? h : 12;
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+   text += "<b>Current time is: </b>" + h + ampm + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  
+    return i;
+}
+
+var today = new Date();
+
+var dd = today.getDate();
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = mm+'/'+dd+'/'+yyyy;
+
+			 
+document.write(today);
+  
+  var todayd = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+todayd = mm+'-'+dd+'-'+yyyy;
+
+			 
+document.write(todayd);
+  
+  
+  </script>
+  
+  
+  
+  
+  </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </html>
